@@ -6,9 +6,11 @@ from rest_framework_jwt.views import obtain_jwt_token
 
 from api import views
 
-router = routers.DefaultRouter()
+router = routers.DefaultRouter(trailing_slash=False)
 
 router.register(r'users', views.UserViewSet)
+router.register(r'arsenals', views.ArsenalViewSet)
+router.register(r'locations', views.LocationViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
