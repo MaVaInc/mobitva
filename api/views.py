@@ -64,4 +64,4 @@ class LocationViewSet(viewsets.ModelViewSet):
         return super(LocationViewSet, self).list(request, *args, **kwargs)
 
 
-#hello
+#test
